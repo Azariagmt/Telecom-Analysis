@@ -7,4 +7,4 @@ TAG="$TRAVIS_BRANCH"
 fi
 docker build ./ -t $DOCKER_REPO:$TAG
 # docker tag $TRAVIS_REPO_SLUG $DOCKER_REPO
-docker push $DOCKER_REPO
+docker push $DOCKER_REPO:$TAG
