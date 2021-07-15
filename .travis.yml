@@ -27,5 +27,5 @@ script:
 
 after_success:
   - cd ../
-  script: chmod u+x .travis/deploy_dockerhub.sh
+  - chmod u+x .travis/deploy_dockerhub.sh
   - .travis/deploy_dockerhub.sh
