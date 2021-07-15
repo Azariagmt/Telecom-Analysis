@@ -1,4 +1,9 @@
 # Config file for automatic testing at travis-ci.com
+sudo: required
+
+services:
+  - docker
+  
 language: python
 
 python:
@@ -19,3 +24,6 @@ cache:
 script:
   - cd ./tests/
   - python -m unittest test_load_data
+
+after_success:
+  - sh .travis/deploy_dockerhub.sh
