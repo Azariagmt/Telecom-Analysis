@@ -26,4 +26,4 @@ script:
   - python -m unittest test_load_data
 
 after_success:
-  script: bash ./travis/deploy_dockerhub.sh
+  script: bash .travis/deploy_dockerhub.sh
