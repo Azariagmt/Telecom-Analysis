@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/experience')
+def experience():
+    return render_template('experience.html')
+
 
 @app.route('/dashboard')
 def dashboard():
