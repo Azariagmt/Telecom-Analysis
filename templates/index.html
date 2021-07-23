@@ -1,21 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="hero">
 
-<!-- Load our React component. -->
-<!-- <script src="../static/like_button.js" defer async></script> -->
-
-
-<h1>User Experience</h1>
-<div id="myDiv" class="container">
-    <div class="row" style="margin-top: 20px;">
-        <h2>Score count graphs</h2>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="scatterPlot"></div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="experienceModel"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                data-aos="fade-up">
+                <div>
+                    <h1>Data Analysis for TellCo.</h1>
+                    <h2>Final report on Tellco's future contracts.</h2>
+                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+                <img src="static/img/favicon.png" class="img-fluid" alt="">
+            </div>
+        </div>
     </div>
 
-</div>
-
-<script src="../static/js/dashboard.js" defer></script>
+</section><!-- End Hero -->
 
 {% endblock %}

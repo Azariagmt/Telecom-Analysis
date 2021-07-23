@@ -12,6 +12,9 @@ def home():
 def experience():
     return render_template('experience.html')
 
+@app.route('/engagement')
+def engagement():
+    return render_template('engagement.html')
 
 @app.route('/dashboard')
 def dashboard():
