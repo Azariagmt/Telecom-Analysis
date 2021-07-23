@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Load our React component. -->
+<!-- <script src="../static/like_button.js" defer async></script> -->
+
+
+<h1>Sentiments Page</h1>
+<div id="myDiv" class="container">
+    <div class="row" style="margin-top: 20px;">
+        <h2>Score count graphs</h2>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="barCol"></div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="pieCol"></div>
+    </div>
+    <div class="row">
+        <h2>Sentiment analysis scatter plot</h2>
+        <div class="col-xs-12 col-sm-12 col-md-10" id="sentimentCol"></div>
+    </div>
+    <div class="row">
+        <h2>Wordcloud showcasing most frequent words</h2>
+    {% include 'wordcloud.html' %}
+    </div>
+</div>
+<script defer>
+    let data = {{ data | tojson }}
+</script>
+<script src="../static/js/dashboard.js" defer></script>
+
+{% endblock %}
