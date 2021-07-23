@@ -1,11 +1,12 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
+from flask_cors import CORS
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def home():
-    return 'Home page'
+    return render_template('index.html')
 
 
 @app.route('/dashboard')
